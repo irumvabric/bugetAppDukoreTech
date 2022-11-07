@@ -36,9 +36,16 @@ function resetInput() {
 }
 
 function updateUI() {
-
     const incomes = dataLists.filter(e => e.type == "+")
     const expenses = dataLists.filter(e => e.type == "-")
+
+    const totalIncomes = incomes.reduce((total, e) =>total + e.amount *1, 0)
+    const totalExpenses = expenses.reduce((total, e) =>total + e.amount *1, 0)
+    
+    document.getElementById("budgetTotal").innerHTML = (totalIncomes - totalExpenses)
+    document.getElementById("incomesBuget").innerHTML = (totalIncomes )
+    document.getElementById("expensesBuget").innerHTML = (totalExpenses )
+    document.getElementById("pourcentData").innerHTML = (totalExpenses *100 /(totalIncomes) )
     displayData("incomes_lists", incomes)
     displayData("expenses_lists", expenses)
 }
