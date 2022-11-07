@@ -3,3 +3,17 @@
     padding: 0;
     box-sizing: border-box;
 }
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40vh;
+   background-image: url(../img/bg.jpg);
+   background-size: cover;
+   color: #fff;
+}
+
+.header_incomes, .header_expenses{
+    display: flex;
+    justify-content: space-between;
+}
