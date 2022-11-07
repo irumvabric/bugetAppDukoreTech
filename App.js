@@ -2,7 +2,21 @@ const btnSubmit = document.getElementById('btnSubmit')
 const type = document.getElementById('type')
 const description = document.getElementById('description')
 const amount = document.getElementById('amount')
-
+const MONTHNAME = [
+    "January", 
+    "February", 
+    "March", 
+    "April", 
+    "May", 
+    "June", 
+    "July", 
+    "August", 
+    "September", 
+    "October", 
+    "November", 
+    "December", 
+]
+headerBuget()
 let dataLists = []
 btnSubmit.addEventListener('click', function(e) {
     e.preventDefault();
@@ -14,6 +28,7 @@ btnSubmit.addEventListener('click', function(e) {
 
 function addElement() {
     const element = {
+        id: dataLists.length,
         type : type.value,
         description : description.value,
         amount : amount.value,
@@ -35,10 +50,15 @@ function resetInput() {
 
 }
 
+function headerBuget() {
+    const currentDate = new Date();
+    document.getElementById("headerBuget").innerHTML = "Buget available in " 
+    + MONTHNAME[currentDate.getMonth()] +" "+ currentDate.getFullYear() + ""
+}
+
 function updateUI() {
     const incomes = dataLists.filter(e => e.type == "+")
     const expenses = dataLists.filter(e => e.type == "-")
-
     const totalIncomes = incomes.reduce((total, e) =>total + e.amount *1, 0)
     const totalExpenses = expenses.reduce((total, e) =>total + e.amount *1, 0)
     
@@ -60,8 +80,14 @@ function displayData(node_id, dataLists) {
         <div class="element_list">
                 <span>${dataLists[i].description}</span>
                  <span>${dataLists[i].amount}</span>
+                 <span onclick="removeElement(${dataLists[i].id})">X</span>
         </div>
         `
     }
     element_id.innerHTML = listElement
+}
+
+function removeElement(element_id) {
+    dataLists = dataLists.filter(l => l.id != element_id)
+    updateUI()
 }
