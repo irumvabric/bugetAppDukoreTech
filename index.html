@@ -8,43 +8,59 @@
     <link rel="stylesheet" href="asset/style.css">
 </head>
 <body>
-<div>
-    <header>
-        <div>
-            <h3>Avaible Bugdet in Nomver 2022</h3>
-            <h2>+145 0000 000</h2>
-            <div class="header_incomes">
-            <span>INCOMES</span>
-            <span>15000</span>
-            </div>
-            <div class="header_expenses">
-            <span>EXPENSES</span>
-            <span>10000</span>
-            </div>
-        </div>
-    </header>
-    <article>
-
-    <form action="">
-    <select name="" id="">
-    <option value="+">+</option>
-    <option value="-">-</option>
-    </select>
-    <input type="text" placeholder="Description">
-    <input type="number" placeholder="Value">
-    </form>
-    
-    </article>
-    <aside>
     <div>
-    <h1>INCOMES</h1>
+        <header>
+            <div>
+                <h3>Avaible Bugdet in Nomver 2022</h3>
+                <h2>+145 0000 000</h2>
+                <div class="header_incomes">
+                    <span>INCOMES</span>
+                    <span>15000</span>
+                </div>
+                <div class="header_expenses">
+                    <span>EXPENSES</span>
+                    <span>10000</span>
+                </div>
+            </div>
+        </header>
+        <article>
+            
+            <form action="">
+                <select name="" id="type">
+                    <option value="+">+</option>
+                    <option value="-">-</option>
+                </select>
+                <input type="text" required id="description" placeholder="Description">
+                <input type="number" required id="amount" placeholder="Value">
+                <button type="submit" id="btnSubmit">🆗</button>
+            </form>
+            
+        </article>
+        <aside>
+            <div>
+                <h1>INCOMES</h1>
+                
+                <div id="incomes_lists">
+                    <div>
+                        <span>Elodie</span>
+                        <span>Intelligente</span>
+                    </div>
+                </div>
+                
+            </div>
+            <div>
+                <h1>EXPENSES</h1>
+                <div id="expenses_lists">
+                    <div>
+                        <span>Elodie</span>
+                        <span>Intelligente</span>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <footer></footer> 
     </div>
-    <div>
-    <h1>EXPENSES</h1>
-    </div>
-    </aside>
-   <footer></footer> 
-</div>
     
+    <script src="App.js"></script>
 </body>
 </html>
