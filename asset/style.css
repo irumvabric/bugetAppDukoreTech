@@ -2,7 +2,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif}
+
 header{
     display: flex;
     justify-content: center;
@@ -16,10 +17,38 @@ header{
 
 .header_incomes{
     background: #28b9b5;
+
+    height: 40px;
+    width: 300px;
+    margin: 10px auto ;
+}
+
+.header_incomes #title{
+    margin: 6px 6px;
+
+}
+
+.header_incomes #incomesBuget{
+    margin: 6px 6px;
+
 }
 .header_expenses{
     background: #ff5049;
+
+    height: 40px;
+    width: 300px;
+    margin: 10px auto;
 }
+
+.header_expenses #title{
+    margin: 6px 6px;
+
+}
+
+.header_expenses #expensesBuget{
+    margin: 6px 6px;
+
+} 
 .header_incomes, .header_expenses{
     display: flex;
     justify-content: space-between;
@@ -28,12 +57,32 @@ header{
 article{
     display: flex;
     justify-content: center;
+    border: 1px solid #adadad;
+
 }
 
 aside{
+    margin: 50px auto;
     display: flex;
     justify-content: center;
     gap: 10px;
+
+}
+
+aside .bodyTable #incomes_title{
+    color: #28b9b5;
+}
+
+aside .bodyTable #expenses_title{
+    color: #ff5049;
+}
+
+aside .bodyTable #element_list #color{
+    color: #28b9b5;
+}
+
+aside .bodyTable #element_list #color{
+    color: #ff5049;
 }
 
 button{
@@ -49,3 +98,46 @@ button{
     display: flex;
     justify-content: space-between;
 }
+
+.form{
+    background-color: #f7f7f7;
+    height: 70px;
+
+}
+
+.form article form select{
+    height: 40px;
+    width: 40px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    margin:15px 10px; 
+}
+
+.form article form #btnSubmit{
+    height: 35px;
+    width: 35px;
+    background-color: #f7f7f7;
+    color: #28b9b5;
+    border: 1px solid #28b9b5;
+}
+
+
+.form article form #description{
+    height: 40px;
+    width: 300px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    margin:15px 10px;
+}
+
+.form article form #amount{
+    height: 40px;
+    width: 120px;
+    border: 1px solid #f0f0f0;
+    border-radius: 3px;
+    margin:15px 10px;
+}
+
+/* .titreIncomes{
+
+} */

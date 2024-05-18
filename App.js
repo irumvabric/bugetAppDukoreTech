@@ -79,7 +79,7 @@ function displayData(node_id, dataLists) {
         listElement += `
         <div class="element_list">
                 <span>${dataLists[i].description}</span>
-                 <span>${dataLists[i].amount}</span>
+                 <span id="color">${dataLists[i].amount}</span>
                  <span onclick="removeElement(${dataLists[i].id})">X</span>
         </div>
         `

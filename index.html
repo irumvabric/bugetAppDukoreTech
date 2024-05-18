@@ -14,41 +14,44 @@
                 <h3 id="headerBuget"></h3>
                 <h2 id="budgetTotal">+145 0000 000</h2>
                 <div class="header_incomes">
-                    <span>INCOMES</span>
+                    <span id="title">INCOMES</span>
                     <span id="incomesBuget">15000</span>
                     <span id=""></span>
                 </div>
                 <div class="header_expenses">
-                    <span>EXPENSES</span>
+                    <span id="title">EXPENSES</span>
                     <span id="expensesBuget">10000</span>
                     <span id="pourcentData"></span>
                 </div>
             </div>
         </header>
-        <article>
+        <div class="form">
+            <article>
             
-            <form action="">
-                <select name="" id="type">
-                    <option value="+">+</option>
-                    <option value="-">-</option>
-                </select>
-                <input type="text" required id="description" placeholder="Description">
-                <input type="number" required id="amount" placeholder="Value">
-                <button type="submit" id="btnSubmit">🆗</button>
-            </form>
-            
-        </article>
+                <form action="">
+                    <select name="" id="type">
+                        <option value="+">+</option>
+                        <option value="-">-</option>
+                    </select>
+                    <input type="text" required id="description" placeholder="Description">
+                    <input type="number" required id="amount" placeholder="Value">
+                    <button type="submit" id="btnSubmit">&#10003;</button>
+                </form>
+                
+            </article>
+        </div>
+        
         <aside>
-            <div>
-                <h1>INCOMES</h1>
+            <div class="bodyTable">
+                <h1 id="incomes_title">INCOMES</h1>
                 
                 <div id="incomes_lists">
                     
                 </div>
                 
             </div>
-            <div>
-                <h1>EXPENSES</h1>
+            <div class="bodyTable">
+                <h1 id="expenses_title">EXPENSES</h1>
                 <div id="expenses_lists">
                     
                 </div>
